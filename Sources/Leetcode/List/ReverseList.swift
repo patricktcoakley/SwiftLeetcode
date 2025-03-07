@@ -1,13 +1,13 @@
 func reverseList(_ head: ListNode?) -> ListNode? {
-    var prev: ListNode?
-    var curr = head
+  var prev: ListNode?
+  var curr = head
 
-    while curr != nil {
-        let next = curr?.next
-        curr?.next = prev
-        prev = curr
-        curr = next
-    }
+  while curr != nil {
+    let next = curr?.next
+    curr?.next = prev
+    prev = curr
+    curr = next
+  }
 
-    return prev
+  return prev
 }
