@@ -5,16 +5,16 @@ func isValid(_ s: String) -> Bool {
     "}": "{",
   ]
 
-  var chars = [Character]()
+  var stack: [Character] = []
 
   for c in s {
     switch c {
     case "(", "[", "{":
-      chars.append(c)
+      stack.append(c)
     default:
-      guard chars.popLast() == d[c] else { return false }
+      guard stack.popLast() == d[c] else { return false }
     }
   }
 
-  return chars.isEmpty
+  return stack.isEmpty
 }
