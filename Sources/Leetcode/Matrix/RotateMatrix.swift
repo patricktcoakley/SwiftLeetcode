@@ -7,8 +7,8 @@ func rotateMatrix(_ matrix: inout [[Int]]) {
   }
 
   for i in 0 ..< n {
-    for j in 0 ..< n / 2 {
-      (matrix[i][j], matrix[i][n - j - 1]) = (matrix[i][n - j - 1], matrix[i][j])
+    for row in 0 ..< n {
+      matrix[row].reverse()
     }
   }
 }

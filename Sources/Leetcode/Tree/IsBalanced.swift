@@ -3,6 +3,7 @@ func isBalanced(_ root: TreeNode?) -> Bool {
 
   let leftDepth = maxDepth(root.left)
   let rightDepth = maxDepth(root.right)
+  
   if abs(leftDepth - rightDepth) > 1 {
     return false
   }
