@@ -23,5 +23,6 @@ func numIslands(_ grid: [[Character]]) -> Int {
       }
     }
   }
+
   return count
 }

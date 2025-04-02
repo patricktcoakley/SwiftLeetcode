@@ -1,6 +1,6 @@
 import Collections
 
-func maxDepth(_ root: TreeNode?) -> Int {
+func minDepth(_ root: TreeNode?) -> Int {
   guard let root else { return 0 }
 
   var levels = 0
@@ -12,6 +12,9 @@ func maxDepth(_ root: TreeNode?) -> Int {
 
     for _ in 0 ..< q.count {
       let node = q.popFirst()!
+      if node.left == nil && node.right == nil {
+        return levels
+      }
 
       if let left = node.left {
         q.append(left)
